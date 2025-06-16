@@ -70,3 +70,6 @@ install(EXPORT spzTargets
   NAMESPACE spz::
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/spz"
 )
+
+add_executable(convert tools/convert.cpp)
+target_link_libraries(convert PRIVATE spz ZLIB::ZLIB)
