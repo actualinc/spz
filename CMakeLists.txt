@@ -28,6 +28,7 @@ set(spz_headers
 
 # create the library and configure it
 add_library(spz ${spz_sources})
+add_library(spz::spz ALIAS spz)
 
 target_link_libraries(spz PRIVATE ZLIB::ZLIB)
 
